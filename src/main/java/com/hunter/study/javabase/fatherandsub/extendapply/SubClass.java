@@ -1,0 +1,1 @@
+package com.hunter.study.javabase.fatherandsub.extendapply;/** * @Author zhangcl * @Date 17/2/5  上午10:36 */public class SubClass extends FatherClass{    int sex =0;    @Override    void overMethod(UserVO userVO) {        System.out.println("执行子类方法:"+userVO.getName());    }    static void staticMethod(){        System.out.println("子类静态方法");    }}

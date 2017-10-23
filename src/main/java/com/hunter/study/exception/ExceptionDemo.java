@@ -1,0 +1,1 @@
+package com.hunter.study.exception;/** * @Author zhangcl * @Date 17/2/10  下午3:36 */public class ExceptionDemo {    public static void main(String[] args){        NullPointerException nullPointerException=new NullPointerException("111111");        System.out.println(nullPointerException.getMessage());    }}

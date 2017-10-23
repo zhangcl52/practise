@@ -1,0 +1,1 @@
+package com.hunter.study.javabase.thisuse;/** * @Author zhangcl * @Date 17/2/8  上午9:06 *///this 指的是对象本身。因为静态方法是类的方法,所以不能用thispublic class ThisUse {    public static void main(String[] args){        method1();    }    /**     * static method one     */    public static void method1(){    }}

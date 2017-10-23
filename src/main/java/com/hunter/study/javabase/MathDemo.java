@@ -1,0 +1,1 @@
+package com.hunter.study.javabase;/** * @Author zhangcl * @Date 17/2/9  下午10:59 */public class MathDemo {    public static void main(String[] args){        int i=27;        System.out.println(i>>1);    }}
