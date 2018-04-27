@@ -1,0 +1,1 @@
+package com.hunter.study.designpattern.proxy.dynamic.cglib;/** * @Author zhangcl * @Date 18/4/24  上午1:02 */public class Main {    public static void main(String[] args) {        MyMethodInterceptor myMethodInterceptor=new MyMethodInterceptor(new Tiger());        Tiger tiger=(Tiger) myMethodInterceptor.getProxy();        tiger.eat();    }}

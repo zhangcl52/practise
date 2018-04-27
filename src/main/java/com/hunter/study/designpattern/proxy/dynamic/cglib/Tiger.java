@@ -1,0 +1,1 @@
+package com.hunter.study.designpattern.proxy.dynamic.cglib;/** * @Author zhangcl * @Date 18/4/24  上午12:51 */public class Tiger {    public void eat(){        System.out.println("Tiger is eating");    }}
