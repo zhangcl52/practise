@@ -2,7 +2,6 @@ package com.hunter.study.designpattern.proxy.dynamic.jdk;
 
 import sun.misc.ProxyGenerator;
 
-import javax.security.auth.Subject;
 import java.io.FileOutputStream;
 
 /**

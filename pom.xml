@@ -1,14 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.7.RELEASE</version>
+    </parent>
 
     <groupId>com.hunter.app</groupId>
     <artifactId>app-study</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-
     <name>base-app</name>
-    <url>http://maven.apache.org</url>
 
 
     <properties>
@@ -20,20 +26,15 @@
         <!-- Test libs -->
         <junit_version>4.10</junit_version>
         <!-- spring 集成包 -->
-        <spring_bom_version>4.2.3.RELEASE</spring_bom_version>
-        <spring_version>4.2.5.RELEASE</spring_version>
-
-        <!-- Maven插件版本定义 apache-maven-3.3.3版本默认版本插件版本 -->
-        <maven_source_plugin_version>2.6</maven_source_plugin_version>
-        <maven_compiler_plugin_version>3.1</maven_compiler_plugin_version>
-        <maven_jar_plugin_version>2.4</maven_jar_plugin_version>
-        <maven_war_plugin_version>2.2</maven_war_plugin_version>
-        <maven_install_plugin_version>2.4</maven_install_plugin_version>
-        <maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
-        <maven-surefire-plugin_version>2.12.4</maven-surefire-plugin_version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -47,47 +48,6 @@
             <version>${guava_version}</version>
         </dependency>
 
-        <!-- springframework-bom -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-framework-bom</artifactId>
-            <version>${spring_bom_version}</version>
-            <type>txt</type>
-        </dependency>
-        <!-- srping -->
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-expression</artifactId>
-            <version>${spring_version}</version>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -97,79 +57,16 @@
     </dependencies>
 
     <build>
-        <finalName>base-code</finalName>
-        <pluginManagement>
-            <plugins>
-                <!-- compiler插件, 设定JDK版本 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven_compiler_plugin_version}</version>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                        <encoding>${file_encoding}</encoding>
-                    </configuration>
-                </plugin>
-                <!-- test插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${maven-surefire-plugin_version}</version>
-                    <configuration>
-                        <!--<skip>true</skip> -->
-                        <skip>true</skip>
-                        <failIfNoTests>false</failIfNoTests>
-                        <includes>
-                            <include>**/*Test.java</include>
-                        </includes>
-                    </configuration>
-                </plugin>
-                <!-- resource插件, 设定编码 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>${maven_source_plugin_version}</version>
-                    <configuration>
-                        <encoding>${file_encoding}</encoding>
-                    </configuration>
-                </plugin>
-                <!-- install插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>${maven_install_plugin_version}</version>
-                </plugin>
-                <!-- deploy插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>${maven_deploy_plugin_version}</version>
-                </plugin>
-                <!-- war插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven_war_plugin_version}</version>
-                </plugin>
-                <!-- jar插件 -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>${maven_jar_plugin_version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>zhang</id>
-            <url>http://192.168.100.130:8081/nexus/content/repositories/hunterRelease</url>
-        </repository>
-        <snapshotRepository>
-            <id>zhang</id>
-            <url>http://192.168.100.130:8081/nexus/content/repositories/hunterSnapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
