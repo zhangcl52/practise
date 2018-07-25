@@ -1,0 +1,1 @@
+package com.hunter.study.thread.unsafe;import lombok.Getter;/** * @Author zhangcl * @Date 18/7/23  下午11:03 */@Getterpublic class PeopleDemo {    private String name;    private int age;    static {        System.out.println("PeopleDemo static execute");    }    public PeopleDemo(){        System.out.println("PeopleDemo contract execute");    }}
