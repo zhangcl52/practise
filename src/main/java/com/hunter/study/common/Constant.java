@@ -1,0 +1,1 @@
+package com.hunter.study.common;/** * @Author zhangcl * @Date 18/7/25  上午9:02 */public class Constant {}

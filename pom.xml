@@ -19,13 +19,15 @@
 
     <properties>
         <file_encoding>UTF-8</file_encoding>
-
         <!-- jar包版本定义 -->
+
+
         <!-- guava -->
-        <guava_version>18.0</guava_version>
+        <guava_version>20.0</guava_version>
         <!-- Test libs -->
-        <junit_version>4.10</junit_version>
-        <!-- spring 集成包 -->
+        <junit_version>4.12</junit_version>
+        <!--curator zookeeper-->
+        <curator_version>2.10.0</curator_version>
     </properties>
 
     <dependencies>
@@ -39,7 +41,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit_version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -55,12 +56,42 @@
             <version>1.16.4</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+
+        <!--zookeeper api-->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.2.0</version>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator_version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-client</artifactId>
+            <version>${curator_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+            <version>${curator_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-test</artifactId>
+            <version>${curator_version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
 
     </dependencies>
 
