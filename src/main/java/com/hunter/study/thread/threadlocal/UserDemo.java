@@ -1,1 +1,1 @@
-package com.hunter.study.thread.threadlocal;import lombok.Getter;import lombok.Setter;/** * @Author zhangcl * @Date 17/10/26  下午10:28 */@Getter@Setterpublic class UserDemo {    private String name;    private int age;    private String sex;}
+package com.hunter.study.thread.threadlocal;import lombok.AllArgsConstructor;import lombok.Getter;import lombok.Setter;/** * @Author zhangcl * @Date 17/10/26  下午10:28 */@Getter@Setter@AllArgsConstructorpublic class UserDemo {    private String name;}

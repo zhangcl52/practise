@@ -1,0 +1,1 @@
+package com.hunter.study.exception;import java.io.IOException;/** * @Author 水木 * @Date 2019-04-05  12:05 */public class UnCheckExceptionDemo {    public void doNullPointerException() throws NullPointerException {        System.out.println("do something");    }    public void doIOException() throws IOException {        System.out.println("do something");    }}

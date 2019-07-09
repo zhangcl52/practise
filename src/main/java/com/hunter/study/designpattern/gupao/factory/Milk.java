@@ -1,0 +1,1 @@
+package com.hunter.study.designpattern.gupao.factory;/** * @Author 水木 * @Date 2019-01-17  08:51 */public interface Milk {    public String getName();}

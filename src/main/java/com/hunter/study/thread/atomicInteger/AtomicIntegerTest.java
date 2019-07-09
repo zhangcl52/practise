@@ -1,0 +1,1 @@
+package com.hunter.study.thread.atomicInteger;import org.junit.Test;import java.util.concurrent.atomic.AtomicInteger;/** * @Author zhangcl * @Date 18/8/31  下午4:48 */public class AtomicIntegerTest {    @Test    public void incrementAndGetTest(){        AtomicInteger atomicInteger=new AtomicInteger();        atomicInteger.set(1);    }}

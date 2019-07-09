@@ -1,0 +1,1 @@
+package com.hunter.study.javabase.jdk8;/** * @Author 水木 * @Date 2019-07-08  23:18 */public class BiFunctionDemo {    public static void main(String[] args) {    }}

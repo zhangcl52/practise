@@ -24,6 +24,8 @@ public class Main {
         //1、代理类调用逻辑处理类的invoke方法，参数为自己，调用的方法，参数
         //2、自己实现的逻辑处理类处理逻辑后，利用反射调用委托类
         //3、委托类实现已有逻辑
+        createProxyClassFile();
+
     }
 
     public static void createProxyClassFile() {
