@@ -1,4 +1,4 @@
-package com.hunter.study.designpattern.observer;
+package com.hunter.study.designpattern.observer.v1;
 
 /**
  * Created by zhangcl
@@ -14,7 +14,7 @@ public class MainClass {
         publicAccount.registerObserver(w1);
         publicAccount.registerObserver(w2);
         publicAccount.registerObserver(w3);
-        publicAccount.setMessage("我发布了新消息");
+//        publicAccount.setMessage("我发布了新消息");
         publicAccount.removeObserver(w1);
         publicAccount.setMessage("我发布了新消息");
     }

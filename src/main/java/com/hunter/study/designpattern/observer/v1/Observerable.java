@@ -1,4 +1,4 @@
-package com.hunter.study.designpattern.observer;
+package com.hunter.study.designpattern.observer.v1;
 
 /**
  * Created by zhangcl
