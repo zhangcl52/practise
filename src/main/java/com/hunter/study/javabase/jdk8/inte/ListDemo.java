@@ -1,4 +1,4 @@
-package com.hunter.study.javabase.jdk8;
+package com.hunter.study.javabase.jdk8.inte;
 
 import com.google.common.collect.Lists;
 
