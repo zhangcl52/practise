@@ -1,0 +1,1 @@
+package com.hunter.study.designpattern.singleton;/** * @Author 水木 * @Date 2020/6/12  9:02 上午 */public class Test {     public static class Test1{    }}

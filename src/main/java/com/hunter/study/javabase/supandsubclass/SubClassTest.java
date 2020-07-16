@@ -1,0 +1,1 @@
+package com.hunter.study.javabase.supandsubclass;/** * @Author 水木 * @Date 2020/3/8  7:23 上午 */public class SubClassTest extends SuperClassTest{    static {        System.out.println("SubClass static init");    }}
