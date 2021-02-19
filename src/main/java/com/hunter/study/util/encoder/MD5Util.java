@@ -37,7 +37,7 @@ public final class MD5Util {
     }
 
     public static void main(String[] args) {
-        String s = "123456";
+        String s = "1234561212";
         System.out.println(encode32(s));
         //e10adc3949ba59abbe56e057f20f883e  123456
         //49ba59abbe56e057
