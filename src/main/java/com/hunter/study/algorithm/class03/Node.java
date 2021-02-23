@@ -1,0 +1,1 @@
+package com.hunter.study.algorithm.class03;import lombok.AllArgsConstructor;/** * @Author 水木 * @Date 2021/2/22  4:06 下午 */@AllArgsConstructorpublic class Node<T> {	public T value;	public Node next;	public Node(T t) {		value = t;	}	@Override	public String toString() {		return value.toString();	}}
