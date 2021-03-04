@@ -1,1 +1,1 @@
-package com.hunter.study.algorithm.class03;/** * @Author 水木 * @Date 2021/2/22  6:09 下午 */public class DoubleNode<T> {	public T value;	public DoubleNode next;	public DoubleNode pre;	public DoubleNode(T value) {		value = value;	}}
+package com.hunter.study.algorithm.class03;/** * @Author 水木 * @Date 2021/2/22  6:09 下午 */public class DoubleNode<T> {	public T value;	public DoubleNode next;	public DoubleNode pre;	public DoubleNode(T value) {		this.value = value;	}	@Override	public String toString() {		return value.toString();	}}
