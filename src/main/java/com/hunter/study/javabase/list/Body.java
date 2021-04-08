@@ -1,0 +1,1 @@
+package com.hunter.study.javabase.list;import lombok.AllArgsConstructor;import lombok.Builder;import lombok.Data;/** * @Author 水木 * @Date 2021/3/9  5:40 下午 */@Data@Builder@AllArgsConstructorpublic class Body {	private String name;}
